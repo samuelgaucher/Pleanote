@@ -1,0 +1,127 @@
+%=======================================%
+%																					%
+%			      Pleanote: a pleasing novel template				%
+%						     by Samuel Gaucher							%
+%									Mar 2019									%
+%																					%
+%										***										%
+%							     Happy writing!								%
+%										***										%
+%=======================================%
+
+\documentclass{pleanote} 	% pleanote.cls file (must be in same folder) contains all includes, packages, dimensions, etc. 
+\usepackage{kantlipsum} 		% to type some random Kantian jibber-jabber
+
+
+% ====================
+% = DOCUMENT CONTENT = 
+% ====================
+\def\theauthor{The Author}
+\def\yourtitle{a pleasing novel template}
+\def\year{2019}
+
+
+% ================
+%  = THE DOCUMENT =
+% ================
+\begin{document}
+\setlength{\pdfpagewidth}{11.8cm} 	% define the size of the pdf pages
+\setlength{\pdfpageheight}{17.7cm} 	% 
+\setlength{\parskip}{0cm} 					% set spacing between paragraphs
+\begin{spacing}{0.96} 						% set spacing between text lines
+
+
+% ============
+% = TITLE PAGE =
+% ============
+\thispagestyle{empty}
+\begin{center}
+\huge\theauthor\\
+\vspace{2.1cm}
+\Huge \textbf{Pleanote:}\\
+\textbf{\yourtitle}\\
+\vspace{1.0cm}
+\normalsize
+\textit{Text written using the}\\
+Kant generator for Python\\
+\textit{by Mark Pilgrim via}\\
+\textit{the} kantlipsum \textit{package}
+\vfill
+\Large\textsc{pleanote}
+\end{center}
+
+
+% Copyright, if needed
+\newpage
+\thispagestyle{empty}
+\null
+\vfill
+\begin{center}
+\textcopyright \textsc{\theauthor} \year
+\end{center}
+
+
+% ==========
+% = PREFACE =
+% ==========
+\chapter{Preface}
+\pagenumbering{roman} 	% roman numerals page numbering in preamble
+\setcounter{page}{3} 		% first pages count but are not numbered
+
+% Preface text
+\kant[23-28]
+
+% Signature
+\vspace{0.5cm}
+\hfill
+\begin{flushleft}
+\noindent Berlin, 2019\\
+\end{flushleft}
+
+
+% =============
+%  = DEDICATION =
+% =============
+\newpage
+\thispagestyle{empty}
+\vspace*{3.5cm}
+\begin{flushright}
+\textit{To all my friends, with love}
+\end{flushright}
+
+
+% ============
+%  = CHAPTERS =
+% ============
+\pagenumbering{arabic} % return to arabic page numbering
+
+\chapter{Introduction}
+\setcounter{page}{1}
+
+% Here comes text.
+\kant[1-5]
+
+
+\chapter{First chapter}
+Here is a footnote.\footnote{\kant[9]}
+\kant[7-23]
+
+\chapter{Second chapter}
+\kant[24-28]
+
+\chapter{The last chapter}
+\kant[29-33]
+
+\chapter{Conclusion}
+\kant[34-36]
+
+
+
+% ==========
+%  = THE END =
+% ==========
+\newpage
+\thispagestyle{empty}
+\null
+\end{spacing}
+\end{document}
